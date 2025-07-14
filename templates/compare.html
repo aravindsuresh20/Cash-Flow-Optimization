@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Company Comparison | CashFlowX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/compare.css') }}">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Animated Background Elements -->
+    <div class="bg-element bg-element-1"></div>
+    <div class="bg-element bg-element-2"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='3.png') }}" alt="Company Logo">
+            <span class="logo-text"></span>
+        </div>
+        <nav>
+            <a href="/" class="back-link" style="margin: 0;"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1 class="comparison-title">Comparison: {{ company1 }} vs {{ company2 }}</h1>
+        <img src="/static/company_comparison.png" alt="Company Comparison Chart" class="comparison-img">
+        <a href="/" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class=" Powered By Aravind Suresh.">
+            
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/cursor.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/compare.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result |</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Animated Background Elements -->
+    <div class="bg-element bg-element-1"></div>
+    <div class="bg-element bg-element-2"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='3.png') }}" alt="Company Logo">
+            <span class="logo-text"></span>
+        </div>
+        <nav>
+            <a href="/" class="back-link" style="margin: 0;"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="result-card">
+            <h2>Predicted Market Value</h2>
+            <p>The estimated market value is:</p>
+            <div class="prediction-value">${{ prediction | round(2) }} million</div>
+        </div>
+
+        <div class="result-card">
+            <h2>Company Comparison</h2>
+            <p>Based on your input, here's a comparison of two randomly selected companies:</p>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Company Name</th>
+                        <th>Predicted Market Value (million)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ company1_name }}</td>
+                        <td class="company-value">${{ company1_prediction | round(2) }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ company2_name }}</td>
+                        <td class="company-value">${{ company2_prediction | round(2) }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <a href="/" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="">
+          Powered By Aravind Suresh.
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/cursor.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/result.js') }}"></script>
+</body>
+</html>

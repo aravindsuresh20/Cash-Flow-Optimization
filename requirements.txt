@@ -1,0 +1,8 @@
+flask==3.0.3
+matplotlib==3.9.2
+os
+pandas==2.2.2
+pickle
+random
+seaborn==0.13.2
+sklearn

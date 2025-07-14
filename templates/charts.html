@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced Analytics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/charts.css') }}">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Animated Background Elements -->
+    <div class="bg-element bg-element-1"></div>
+    <div class="bg-element bg-element-2"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='3.png') }}" alt="Company Logo">
+            <span class="logo-text"></span>
+        </div>
+        <nav>
+            <a href="/" class="back-link" style="margin: 0;"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="chart-container">
+            <h3>Revenue vs Profit</h3>
+            <img src="/static/revenue_vs_profit.png" alt="Revenue vs Profit Chart" class="chart-img">
+        </div>
+
+        <div class="chart-container">
+            <h3>Top 10 Companies by Market Value</h3>
+            <img src="/static/top_10_market_value.png" alt="Top 10 Companies Chart" class="chart-img">
+        </div>
+
+        <a href="/" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class=" Powered By Aravind Suresh."

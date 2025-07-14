@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cash Flow Optimizer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- Animated Background Elements -->
+  <div class="bg-element bg-element-1"></div>
+  <div class="bg-element bg-element-2"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="{{ url_for('static', filename='3.png') }}" alt="Company Logo">
+      <span class="logo-text"></span>
+    </div>
+    <nav>
+      <a href="/charts" class="link-btn" style="display: inline-block; margin: 0;">View Charts</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="form-container">
+      <h2>Enter Company Financials</h2>
+      <form action="/predict" method="post">
+        <div class="form-group">
+          <label for="revenue_mil">Revenue (in million)</label>
+          <input type="number" id="revenue_mil" name="revenue_mil" required>
+        </div>
+        <div class="form-group">
+          <label for="profit_mil">Profit (in million)</label>
+          <input type="number" id="profit_mil" name="profit_mil" required>
+        </div>
+        <div class="form-group">
+          <label for="asset_mil">Assets (in million)</label>
+          <input type="number" id="asset_mil" name="asset_mil" required>
+        </div>
+        <div class="form-group">
+          <label for="employees">Employees</label>
+          <input type="number" id="employees" name="employees" required>
+        </div>
+        <button type="submit" class="submit-btn">Predict Market Value and Compare</button>
+      </form>
+      <a href="/charts" class="link-btn">View Advanced Analytics</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="">
+       Powered By Aravind Suresh.
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/cursor.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>
